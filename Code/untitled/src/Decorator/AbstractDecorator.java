@@ -4,7 +4,6 @@ import Car.AbstractCar;
 
 public abstract class AbstractDecorator extends AbstractCar{
     AbstractCar base = null;
-    private int price = 10;
     public AbstractDecorator(AbstractCar _base) {
         base = _base;
     }

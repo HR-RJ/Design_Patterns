@@ -1,9 +1,10 @@
-package Factory;
+package Factory.Engine;
 
+import Factory.AbstractFactory;
 
 public class DieselEngineFactory extends AbstractFactory {
 
-    private int price = 90;
+    private int price = 50; 
     public int getPrice(){
         return price;
     }
