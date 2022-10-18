@@ -6,6 +6,7 @@ import Factory.AbstractFactory;
 public class NuclearEngineFactory extends AbstractFactory {
 
     private int price = 190;
+    public boolean Production = false;
     void Lada(AbstractCar c){
     }
     public int getPrice(){

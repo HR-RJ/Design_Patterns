@@ -2,9 +2,10 @@ package Factory.Engine;
 
 import Factory.AbstractFactory;
 
-public class DieselEngineFactory extends AbstractFactory {
+public abstract class DieselEngineFactory extends AbstractFactory {
 
-    private int price = 50; 
+    private int price = 50;
+    public boolean Production = false;
     public int getPrice(){
         return price;
     }

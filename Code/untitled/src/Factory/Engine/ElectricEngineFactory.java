@@ -4,7 +4,7 @@ import Car.AbstractCar;
 import Factory.AbstractFactory;
 
 public class ElectricEngineFactory extends AbstractFactory {
-
+    public boolean Production = false;
     private int price = 90;
     void Lada(AbstractCar c){
     }

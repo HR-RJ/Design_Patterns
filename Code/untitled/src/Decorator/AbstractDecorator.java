@@ -8,7 +8,7 @@ public abstract class AbstractDecorator extends AbstractCar{
         base = _base;
     }
 
-    public int price() {
+    public int getPrice() {
         if (base != null) {
             return base.getPrice();
         }
@@ -20,5 +20,4 @@ public abstract class AbstractDecorator extends AbstractCar{
             base.print();
         }
     }
-
 }
