@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/rj/Git/Design_Patterns/Code/untitled/src</OriginalElement>
+  <nodes>
+    <node x="164.5" y="400.0">Decorator.MachineGun</node>
+    <node x="1229.8150537634401" y="206.0">Engine.ElectricalEngine</node>
+    <node x="1603.8150537634401" y="206.0">Car.LadaCar</node>
+    <node x="631.8150537634401" y="400.0">Builder.BuilderTesla</node>
+    <node x="1428.8150537634401" y="206.0">Engine.DieselEngine</node>
+    <node x="726.0650537634401" y="206.0">Car.TeslaCar</node>
+    <node x="159.89569892473025" y="206.0">Decorator.AbstractDecorator</node>
+    <node x="1300.5650537634401" y="400.0">Builder.BuilderLada</node>
+    <node x="558.7693548387097" y="206.0">Builder.Builder</node>
+    <node x="1043.8150537634401" y="206.0">Engine.NuclearEngine</node>
+    <node x="10.5" y="400.0">Decorator.Cupholder</node>
+    <node x="797.8150537634401" y="400.0">Builder.BuilderToyota</node>
+    <node x="461.50000000000006" y="400.0">Builder.Director</node>
+    <node x="892.8150537634401" y="206.0">Car.ToyotaCar</node>
+    <node x="819.5206989247303" y="0.0">Engine.AbstractEngine</node>
+    <node x="500.44005376344023" y="572.0">Main</node>
+    <node x="334.50000000000006" y="400.0">Decorator.Spoiler</node>
+    <node x="329.14569892473025" y="102.0">Car.AbstractCar</node>
+    <node x="462.94005376344023" y="492.0">Facade.CarDealerShip</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Builder.BuilderTesla" target="Engine.NuclearEngine" relationship="CREATE">
+      <point x="54.75" y="-15.0" />
+      <point x="759.5650537634401" y="378.0" />
+      <point x="1126.8150537634401" y="378.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Decorator.Spoiler" target="Car.AbstractCar" relationship="DEPENDENCY">
+      <point x="26.75" y="-15.0" />
+      <point x="414.75000000000006" y="184.0" />
+      <point x="113.81639784946083" y="184.0" />
+      <point x="113.81639784946083" y="154.0" />
+      <point x="353.64569892473025" y="154.0" />
+      <point x="-49.0" y="15.0" />
+    </edge>
+    <edge source="Car.LadaCar" target="Car.AbstractCar" relationship="GENERALIZATION">
+      <point x="-29.5" y="-15.0" />
+      <point x="1633.3150537634401" y="174.0" />
+      <point x="821.3150537634401" y="174.0" />
+      <point x="821.3150537634401" y="154.0" />
+      <point x="451.64569892473025" y="154.0" />
+      <point x="49.0" y="15.0" />
+    </edge>
+    <edge source="Decorator.Cupholder" target="Car.AbstractCar" relationship="DEPENDENCY">
+      <point x="-33.5" y="-15.0" />
+      <point x="44.0" y="378.0" />
+      <point x="101.0" y="378.0" />
+      <point x="101.0" y="184.0" />
+      <point x="113.81639784946083" y="184.0" />
+      <point x="113.81639784946083" y="154.0" />
+      <point x="353.64569892473025" y="154.0" />
+      <point x="-49.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderToyota" target="Engine.ElectricalEngine" relationship="CREATE">
+      <point x="59.25" y="-15.0" />
+      <point x="936.0650537634401" y="368.0" />
+      <point x="1317.625" y="368.0" />
+      <point x="1317.625" y="338.0" />
+      <point x="1318.8150537634401" y="338.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Decorator.AbstractDecorator" target="Car.AbstractCar" relationship="GENERALIZATION">
+      <point x="49.25" y="-15.0" />
+      <point x="307.64569892473014" y="174.0" />
+      <point x="821.3150537634401" y="174.0" />
+      <point x="821.3150537634401" y="154.0" />
+      <point x="451.64569892473025" y="154.0" />
+      <point x="49.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderLada" target="Car.LadaCar" relationship="CREATE">
+      <point x="-18.25" y="-15.0" />
+      <point x="1355.3150537634401" y="378.0" />
+      <point x="1418.2693548387097" y="378.0" />
+      <point x="1418.2693548387097" y="368.0" />
+      <point x="1662.8150537634401" y="368.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderToyota" target="Engine.DieselEngine" relationship="CREATE">
+      <point x="59.25" y="-15.0" />
+      <point x="936.0650537634401" y="368.0" />
+      <point x="1317.625" y="368.0" />
+      <point x="1317.625" y="348.0" />
+      <point x="1368.3150537634401" y="348.0" />
+      <point x="1368.3150537634401" y="258.0" />
+      <point x="1505.8150537634401" y="258.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.BuilderTesla" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="545.4400537634402" y="471.0" />
+      <point x="538.5" y="471.0" />
+      <point x="538.5" y="461.0" />
+      <point x="668.3150537634401" y="461.0" />
+      <point x="-36.5" y="15.0" />
+    </edge>
+    <edge source="Engine.DieselEngine" target="Engine.AbstractEngine" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="1505.8150537634401" y="71.0" />
+      <point x="1342.0206989247304" y="71.0" />
+      <point x="1342.0206989247304" y="51.0" />
+      <point x="962.8540322580636" y="51.0" />
+      <point x="57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Decorator.AbstractDecorator" target="Car.AbstractCar" relationship="TO_ONE">
+      <point x="-49.25" y="-15.0" />
+      <point x="209.14569892473025" y="164.0" />
+      <point x="402.64569892473025" y="164.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Engine.ElectricalEngine" target="Engine.AbstractEngine" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="1318.8150537634401" y="71.0" />
+      <point x="1342.0206989247304" y="71.0" />
+      <point x="1342.0206989247304" y="51.0" />
+      <point x="962.8540322580636" y="51.0" />
+      <point x="57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderToyota" target="Engine.AbstractEngine" relationship="DEPENDENCY">
+      <point x="19.75" y="-15.0" />
+      <point x="896.5650537634401" y="348.0" />
+      <point x="882.3150537634401" y="348.0" />
+      <point x="882.3150537634401" y="61.0" />
+      <point x="905.5206989247303" y="61.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Decorator.Spoiler" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="545.4400537634402" y="471.0" />
+      <point x="538.5" y="471.0" />
+      <point x="538.5" y="461.0" />
+      <point x="388.00000000000006" y="461.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.Director" relationship="TO_ONE">
+      <point x="55.0" y="-15.0" />
+      <point x="600.4400537634402" y="471.0" />
+      <point x="1128.7107526881705" y="471.0" />
+      <point x="1128.7107526881705" y="451.0" />
+      <point x="548.5000000000001" y="451.0" />
+      <point x="29.0" y="15.0" />
+    </edge>
+    <edge source="Main" target="Facade.CarDealerShip" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderTesla" target="Engine.AbstractEngine" relationship="DEPENDENCY">
+      <point x="-18.25" y="-15.0" />
+      <point x="686.5650537634401" y="378.0" />
+      <point x="677.2693548387097" y="378.0" />
+      <point x="677.2693548387097" y="61.0" />
+      <point x="905.5206989247303" y="61.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Decorator.MachineGun" target="Car.AbstractCar" relationship="DEPENDENCY">
+      <point x="-37.5" y="-15.0" />
+      <point x="202.0" y="368.0" />
+      <point x="149.39569892473025" y="368.0" />
+      <point x="149.39569892473025" y="184.0" />
+      <point x="113.81639784946083" y="184.0" />
+      <point x="113.81639784946083" y="154.0" />
+      <point x="353.64569892473025" y="154.0" />
+      <point x="-49.0" y="15.0" />
+    </edge>
+    <edge source="Car.TeslaCar" target="Car.AbstractCar" relationship="GENERALIZATION">
+      <point x="40.0" y="-15.0" />
+      <point x="826.0650537634401" y="174.0" />
+      <point x="821.3150537634401" y="174.0" />
+      <point x="821.3150537634401" y="154.0" />
+      <point x="451.64569892473025" y="154.0" />
+      <point x="49.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderTesla" target="Builder.Builder" relationship="REALIZATION">
+      <point x="18.25" y="-15.0" />
+      <point x="723.0650537634401" y="358.0" />
+      <point x="724.3163978494608" y="358.0" />
+      <point x="724.3163978494608" y="348.0" />
+      <point x="639.7693548387097" y="348.0" />
+      <point x="27.0" y="15.0" />
+    </edge>
+    <edge source="Car.ToyotaCar" target="Car.AbstractCar" relationship="GENERALIZATION">
+      <point x="-32.75" y="-15.0" />
+      <point x="925.5650537634401" y="174.0" />
+      <point x="821.3150537634401" y="174.0" />
+      <point x="821.3150537634401" y="154.0" />
+      <point x="451.64569892473025" y="154.0" />
+      <point x="49.0" y="15.0" />
+    </edge>
+    <edge source="Car.TeslaCar" target="Engine.AbstractEngine" relationship="TO_ONE">
+      <point x="-40.0" y="-15.0" />
+      <point x="746.0650537634401" y="164.0" />
+      <point x="758.875" y="164.0" />
+      <point x="758.875" y="81.0" />
+      <point x="813.2706989247303" y="81.0" />
+      <point x="813.2706989247303" y="51.0" />
+      <point x="848.1873655913969" y="51.0" />
+      <point x="-57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Decorator.Cupholder" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="545.4400537634402" y="471.0" />
+      <point x="538.5" y="471.0" />
+      <point x="538.5" y="461.0" />
+      <point x="77.5" y="461.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderLada" target="Engine.AbstractEngine" relationship="DEPENDENCY">
+      <point x="54.75" y="-15.0" />
+      <point x="1428.3150537634401" y="358.0" />
+      <point x="1593.3150537634401" y="358.0" />
+      <point x="1593.3150537634401" y="61.0" />
+      <point x="905.5206989247303" y="61.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Car.AbstractCar" relationship="DEPENDENCY">
+      <point x="-55.0" y="-15.0" />
+      <point x="490.44005376344023" y="471.0" />
+      <point x="0.0" y="471.0" />
+      <point x="0.0" y="184.0" />
+      <point x="113.81639784946083" y="184.0" />
+      <point x="113.81639784946083" y="154.0" />
+      <point x="353.64569892473025" y="154.0" />
+      <point x="-49.0" y="15.0" />
+    </edge>
+    <edge source="Decorator.Spoiler" target="Decorator.AbstractDecorator" relationship="GENERALIZATION">
+      <point x="-26.75" y="-15.0" />
+      <point x="361.25000000000006" y="378.0" />
+      <point x="258.39569892473025" y="378.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.Director" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="545.4400537634402" y="471.0" />
+      <point x="538.5" y="471.0" />
+      <point x="538.5" y="461.0" />
+      <point x="490.50000000000006" y="461.0" />
+      <point x="-29.0" y="15.0" />
+    </edge>
+    <edge source="Car.AbstractCar" target="Engine.AbstractEngine" relationship="DEPENDENCY">
+      <point x="36.75" y="-15.0" />
+      <point x="439.39569892473025" y="61.0" />
+      <point x="905.5206989247303" y="61.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderLada" target="Engine.NuclearEngine" relationship="CREATE">
+      <point x="-18.25" y="-15.0" />
+      <point x="1355.3150537634401" y="378.0" />
+      <point x="1418.2693548387097" y="378.0" />
+      <point x="1418.2693548387097" y="288.0" />
+      <point x="1126.8150537634401" y="288.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.BuilderToyota" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="545.4400537634402" y="471.0" />
+      <point x="538.5" y="471.0" />
+      <point x="538.5" y="461.0" />
+      <point x="837.3150537634401" y="461.0" />
+      <point x="-39.5" y="15.0" />
+    </edge>
+    <edge source="Decorator.MachineGun" target="Decorator.AbstractDecorator" relationship="GENERALIZATION">
+      <point x="37.5" y="-15.0" />
+      <point x="277.0" y="378.0" />
+      <point x="258.39569892473025" y="378.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Engine.NuclearEngine" target="Engine.AbstractEngine" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="1126.8150537634401" y="71.0" />
+      <point x="1342.0206989247304" y="71.0" />
+      <point x="1342.0206989247304" y="51.0" />
+      <point x="962.8540322580636" y="51.0" />
+      <point x="57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Decorator.MachineGun" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="545.4400537634402" y="471.0" />
+      <point x="538.5" y="471.0" />
+      <point x="538.5" y="461.0" />
+      <point x="239.5" y="461.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderToyota" target="Engine.NuclearEngine" relationship="CREATE">
+      <point x="59.25" y="-15.0" />
+      <point x="936.0650537634401" y="368.0" />
+      <point x="1317.625" y="368.0" />
+      <point x="1317.625" y="298.0" />
+      <point x="1126.8150537634401" y="298.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Car.TeslaCar" target="Engine.AbstractEngine" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="786.0650537634401" y="61.0" />
+      <point x="905.5206989247303" y="61.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderTesla" target="Engine.ElectricalEngine" relationship="CREATE">
+      <point x="54.75" y="-15.0" />
+      <point x="759.5650537634401" y="378.0" />
+      <point x="1126.8150537634401" y="378.0" />
+      <point x="1126.8150537634401" y="328.0" />
+      <point x="1318.8150537634401" y="328.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderTesla" target="Car.TeslaCar" relationship="CREATE">
+      <point x="54.75" y="-15.0" />
+      <point x="759.5650537634401" y="378.0" />
+      <point x="1126.8150537634401" y="378.0" />
+      <point x="1126.8150537634401" y="318.0" />
+      <point x="786.0650537634401" y="318.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.BuilderLada" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="545.4400537634402" y="471.0" />
+      <point x="538.5" y="471.0" />
+      <point x="538.5" y="461.0" />
+      <point x="1337.0650537634401" y="461.0" />
+      <point x="-36.5" y="15.0" />
+    </edge>
+    <edge source="Decorator.Cupholder" target="Decorator.AbstractDecorator" relationship="GENERALIZATION">
+      <point x="33.5" y="-15.0" />
+      <point x="111.0" y="378.0" />
+      <point x="258.39569892473025" y="378.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderToyota" target="Engine.AbstractEngine" relationship="TO_ONE">
+      <point x="-19.75" y="-15.0" />
+      <point x="857.0650537634401" y="348.0" />
+      <point x="871.3150537634401" y="348.0" />
+      <point x="871.3150537634401" y="81.0" />
+      <point x="813.2706989247303" y="81.0" />
+      <point x="813.2706989247303" y="51.0" />
+      <point x="848.1873655913969" y="51.0" />
+      <point x="-57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderLada" target="Builder.Builder" relationship="REALIZATION">
+      <point x="-54.75" y="-15.0" />
+      <point x="1318.8150537634401" y="358.0" />
+      <point x="724.3163978494608" y="358.0" />
+      <point x="724.3163978494608" y="348.0" />
+      <point x="639.7693548387097" y="348.0" />
+      <point x="27.0" y="15.0" />
+    </edge>
+    <edge source="Builder.Director" target="Builder.Builder" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="519.5" y="378.0" />
+      <point x="585.7693548387097" y="378.0" />
+      <point x="-27.0" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.BuilderToyota" relationship="TO_ONE">
+      <point x="55.0" y="-15.0" />
+      <point x="600.4400537634402" y="471.0" />
+      <point x="1128.7107526881705" y="471.0" />
+      <point x="1128.7107526881705" y="451.0" />
+      <point x="916.3150537634401" y="451.0" />
+      <point x="39.5" y="15.0" />
+    </edge>
+    <edge source="Car.AbstractCar" target="Engine.AbstractEngine" relationship="TO_ONE">
+      <point x="-36.75" y="-15.0" />
+      <point x="365.89569892473025" y="81.0" />
+      <point x="813.2706989247303" y="81.0" />
+      <point x="813.2706989247303" y="51.0" />
+      <point x="848.1873655913969" y="51.0" />
+      <point x="-57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.BuilderLada" relationship="TO_ONE">
+      <point x="55.0" y="-15.0" />
+      <point x="600.4400537634402" y="471.0" />
+      <point x="1128.7107526881705" y="471.0" />
+      <point x="1128.7107526881705" y="451.0" />
+      <point x="1410.0650537634401" y="451.0" />
+      <point x="36.5" y="15.0" />
+    </edge>
+    <edge source="Facade.CarDealerShip" target="Builder.BuilderTesla" relationship="TO_ONE">
+      <point x="55.0" y="-15.0" />
+      <point x="600.4400537634402" y="471.0" />
+      <point x="1128.7107526881705" y="471.0" />
+      <point x="1128.7107526881705" y="451.0" />
+      <point x="741.3150537634401" y="451.0" />
+      <point x="36.5" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderTesla" target="Engine.AbstractEngine" relationship="TO_ONE">
+      <point x="-54.75" y="-15.0" />
+      <point x="650.0650537634401" y="368.0" />
+      <point x="548.2693548387097" y="368.0" />
+      <point x="548.2693548387097" y="81.0" />
+      <point x="813.2706989247303" y="81.0" />
+      <point x="813.2706989247303" y="51.0" />
+      <point x="848.1873655913969" y="51.0" />
+      <point x="-57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderLada" target="Engine.ElectricalEngine" relationship="CREATE">
+      <point x="-18.25" y="-15.0" />
+      <point x="1355.3150537634401" y="378.0" />
+      <point x="1418.2693548387097" y="378.0" />
+      <point x="1418.2693548387097" y="278.0" />
+      <point x="1318.8150537634401" y="278.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderLada" target="Engine.DieselEngine" relationship="CREATE">
+      <point x="-18.25" y="-15.0" />
+      <point x="1355.3150537634401" y="378.0" />
+      <point x="1418.2693548387097" y="378.0" />
+      <point x="1418.2693548387097" y="268.0" />
+      <point x="1368.3150537634401" y="268.0" />
+      <point x="1368.3150537634401" y="258.0" />
+      <point x="1505.8150537634401" y="258.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderLada" target="Engine.AbstractEngine" relationship="TO_ONE">
+      <point x="18.25" y="-15.0" />
+      <point x="1391.8150537634401" y="358.0" />
+      <point x="1418.3150537634401" y="358.0" />
+      <point x="1418.3150537634401" y="81.0" />
+      <point x="813.2706989247303" y="81.0" />
+      <point x="813.2706989247303" y="51.0" />
+      <point x="848.1873655913969" y="51.0" />
+      <point x="-57.33333333333337" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderToyota" target="Car.ToyotaCar" relationship="CREATE">
+      <point x="59.25" y="-15.0" />
+      <point x="936.0650537634401" y="368.0" />
+      <point x="1317.625" y="368.0" />
+      <point x="1317.625" y="308.0" />
+      <point x="958.3150537634401" y="308.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Builder.BuilderToyota" target="Builder.Builder" relationship="REALIZATION">
+      <point x="-59.25" y="-15.0" />
+      <point x="817.5650537634401" y="358.0" />
+      <point x="724.3163978494608" y="358.0" />
+      <point x="724.3163978494608" y="348.0" />
+      <point x="639.7693548387097" y="348.0" />
+      <point x="27.0" y="15.0" />
+    </edge>
+    <edge source="Car.LadaCar" target="Engine.AbstractEngine" relationship="DEPENDENCY">
+      <point x="29.5" y="-15.0" />
+      <point x="1692.3150537634401" y="184.0" />
+      <point x="1667.8150537634401" y="184.0" />
+      <point x="1667.8150537634401" y="61.0" />
+      <point x="905.5206989247303" y="61.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Car.ToyotaCar" target="Engine.AbstractEngine" relationship="DEPENDENCY">
+      <point x="32.75" y="-15.0" />
+      <point x="991.0650537634401" y="164.0" />
+      <point x="963.3150537634401" y="164.0" />
+      <point x="963.3150537634401" y="61.0" />
+      <point x="905.5206989247303" y="61.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7560275545350172" showDependencies="true" x="861.0" y="301.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
