@@ -10,12 +10,7 @@ import Car.AbstractCar;
 import Decorator.Cupholder;
 import Decorator.MachineGun;
 import Decorator.Spoiler;
-import Engine.DieselEngine;
-import Engine.ElectricalEngine;
-import Engine.NuclearEngine;
 
-import javax.crypto.spec.PSource;
-import java.util.Scanner;
 
 public class CarDealerShip {
     Director director = new Director();
@@ -38,42 +33,41 @@ public class CarDealerShip {
         System.out.println("ToyotaB - sport edition Toyota");
         while (!cont) {
             switch (s.next()) {
-                case "LadaA":
+                case "LadaA" -> {
                     director.buildLadaA(ladaBuilder);
                     car = ladaBuilder.returnCar();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
-                    break;
-                case "LadaB":
+                }
+                case "LadaB" -> {
                     director.buildLadaB(ladaBuilder);
                     car = ladaBuilder.returnCar();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
-                    break;
-                case "TeslaA":
+                }
+                case "TeslaA" -> {
                     director.buildTeslaA(teslaBuilder);
                     car = teslaBuilder.returnCar();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
-                    break;
-                case "TeslaB":
+                }
+                case "TeslaB" -> {
                     director.buildTeslaB(teslaBuilder);
                     car = teslaBuilder.returnCar();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
-                    break;
-                case "ToyotaA":
+                }
+                case "ToyotaA" -> {
                     director.buildToyotaA(toyotaBuilder);
                     car = toyotaBuilder.returnCar();
                     System.out.println("price: " + car.getPrice());
-                    break;
-                case "ToyotaB":
+                }
+                case "ToyotaB" -> {
                     director.buildToyotaB(toyotaBuilder);
                     car = toyotaBuilder.returnCar();
                     System.out.println("price: " + car.getPrice());
-                    break;
-                default:
-                    System.out.println("Please enter valid car type");
+                }
+                default -> System.out.println("Please enter valid car type");
             }
         }
 
@@ -85,20 +79,19 @@ public class CarDealerShip {
         input = s.next();
         while (!input.equals("Done")) {
             switch (input) {
-                case "Spoiler":
+                case "Spoiler" -> {
                     car = new Spoiler(car);
                     System.out.println("price: " + car.getPrice());
-                    break;
-                case "Cupholder":
+                }
+                case "Cupholder" -> {
                     car = new Cupholder(car);
                     System.out.println("price: " + car.getPrice());
-                    break;
-                case "Machinegun":
+                }
+                case "Machinegun" -> {
                     car = new MachineGun(car);
                     System.out.println("price: " + car.getPrice());
-                    break;
-                default:
-                    System.out.println("Invalid decoration");
+                }
+                default -> System.out.println("Invalid decoration");
             }
             input = s.next();
         }
