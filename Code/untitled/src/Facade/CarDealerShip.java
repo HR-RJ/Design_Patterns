@@ -103,6 +103,7 @@ public class CarDealerShip {
         while (true){
             input = s.next();
             if (input.equals("Y")) {
+                System.out.println("here is your car");
                 return car;
             } else if (input.equals("N")) {
                 return this.getCar();
