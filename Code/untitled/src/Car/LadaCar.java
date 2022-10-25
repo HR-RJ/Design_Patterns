@@ -5,10 +5,6 @@ import Engine.AbstractEngine;
 
 public class LadaCar extends AbstractCar {
     private int price = 10;
-    private int seats;
-    private boolean manual;
-//    public Engine Tengine = null;
-    private final AbstractEngine engine;
 
     public LadaCar(AbstractEngine _engine, int _seats, boolean _manual){
         this.engine = _engine;
@@ -28,11 +24,7 @@ public class LadaCar extends AbstractCar {
 
     @Override
     public void print() {
-        super.print();
         System.out.println("Lada");
-//        System.out.println("Total price is: " + (super.price+price));
+        super.print();
     }
 }
-/*
-
- */

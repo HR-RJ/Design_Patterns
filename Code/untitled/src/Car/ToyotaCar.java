@@ -4,8 +4,11 @@ import Engine.AbstractEngine;
 
 public class ToyotaCar extends AbstractCar {
     private int price = 100;
-     public AbstractEngine engine = null;
-    public ToyotaCar(){
+
+    public ToyotaCar(AbstractEngine _engine, int _seats, boolean _manual){
+        this.engine = _engine;
+        this.seats = _seats;
+        this.manual = _manual;
     }
     public int getPrice(){
         if(engine == null){
@@ -18,11 +21,7 @@ public class ToyotaCar extends AbstractCar {
     }
     @Override
     public void print() {
-//        if (!engine == null){
-//            System.out.println(engine.vroom());
-//        }
+        System.out.println("Toyota");
         super.print();
-        System.out.println(" Toyota");
-        System.out.println("Total price is: " + (super.price+price));
     }
 }
