@@ -1,9 +1,10 @@
 package Car;
 // package Engine;
+import Engine.AbstractEngine;
 
 public class ToyotaCar extends AbstractCar {
     private int price = 100;
-     public Engine engine = null;
+     public AbstractEngine engine = null;
     public ToyotaCar(){
     }
     public int getPrice(){

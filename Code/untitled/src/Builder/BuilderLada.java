@@ -1,12 +1,15 @@
 package Builder;
 
-import Car.Engine;
 import Car.LadaCar;
+import Engine.AbstractEngine;
+import Engine.DieselEngine;
+import Engine.ElectricalEngine;
+import Engine.NuclearEngine;
 
 public class BuilderLada implements Builder {
     private int seats;
     private Boolean manual;
-    private Engine engine;
+    private AbstractEngine engine;
 
 
     public void setSeats(int _seats) {
@@ -17,11 +20,21 @@ public class BuilderLada implements Builder {
         this.manual = _manual;
     }
 
-    public void setEngine(Engine _engine) {
-        this.engine = _engine;
+    public void setEngine(String _engine) {
+        switch(_engine) {
+            case "Diesel":
+                this.engine = new DieselEngine();
+                break;
+            case "Electric":
+                this.engine = new ElectricalEngine();
+                break;
+            case "Nuclear":
+                this.engine = new NuclearEngine();
+                break;
+        }
     }
 
     public LadaCar returnCar(){
-        return new LadaCar(this.engine);
+        return new LadaCar(this.engine, this.seats, this.manual);
     }
 }
