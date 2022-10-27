@@ -1,93 +1,114 @@
-package Facade;
+package facade;
 
 import java.util.Scanner;
 
-import Builder.BuilderLada;
-import Builder.BuilderTesla;
-import Builder.BuilderToyota;
-import Builder.Director;
-import Car.AbstractCar;
-import Decorator.Cupholder;
-import Decorator.MachineGun;
-import Decorator.Spoiler;
+import builder.Builder;
+import builder.BuilderLada;
+import builder.BuilderTesla;
+import builder.BuilderToyota;
+import builder.Director;
+import car.Car;
+import decorator.Cupholder;
+import decorator.MachineGun;
+import decorator.Spoiler;
 
+/**
+ * The facade, creates the required builders + director for car building upon initialisation
+ * The getCar() function which gives the customer a few choices
+ * First the type of car gets selected
+ * After that as many decorations as wanted can be added onto the car
+ * And finally there is an option to reset the process and pick a new car or to accept the car,
+ * which then gets returned
+ */
 
-public class CarDealerShip {
-    Director director = new Director();
-    BuilderLada ladaBuilder = new BuilderLada();
-    BuilderTesla teslaBuilder = new BuilderTesla();
-    BuilderToyota toyotaBuilder = new BuilderToyota();
+public class CarDealership {
 
-    public AbstractCar getCar() {
+    private final Director director;
+    private final Builder ladaBuilder;
+    private final Builder teslaBuilder;
+    private final Builder toyotaBuilder;
+
+    public CarDealership() {
+        this.director = new Director();
+        this.ladaBuilder = new BuilderLada();
+        this.teslaBuilder = new BuilderTesla();
+        this.toyotaBuilder = new BuilderToyota();
+    }
+
+    public Car getCar() {
         Scanner s = new Scanner(System.in);
-        AbstractCar car = null;
+        Car car = null;
         String input;
         boolean cont = false;
 
-        System.out.println("Options: ");
-        System.out.println("LadaA - family edition Lada");
-        System.out.println("LadaB - sport edition Lada");
-        System.out.println("TeslaA - model x Tesla");
-        System.out.println("TeslaB - roadster Tesla");
-        System.out.println("ToyotaA - family edition Toyota");
-        System.out.println("ToyotaB - sport edition Toyota");
+        System.out.println("""
+            Options: 
+            [0] - family edition Lada
+            [1] - sport edition Lada
+            [2] - model x Tesla
+            [3] - roadster Tesla
+            [4] - family edition Toyota
+            [5] - sport edition Toyota
+            """);
         while (!cont) {
             switch (s.next()) {
-                case "LadaA" -> {
+                case "0" -> {
                     director.buildLadaA(ladaBuilder);
-                    car = ladaBuilder.returnCar();
+                    car = ladaBuilder.build();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
                 }
-                case "LadaB" -> {
+                case "1" -> {
                     director.buildLadaB(ladaBuilder);
-                    car = ladaBuilder.returnCar();
+                    car = ladaBuilder.build();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
                 }
-                case "TeslaA" -> {
+                case "2" -> {
                     director.buildTeslaA(teslaBuilder);
-                    car = teslaBuilder.returnCar();
+                    car = teslaBuilder.build();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
                 }
-                case "TeslaB" -> {
+                case "3" -> {
                     director.buildTeslaB(teslaBuilder);
-                    car = teslaBuilder.returnCar();
+                    car = teslaBuilder.build();
                     System.out.println("price: " + car.getPrice());
                     cont = true;
                 }
-                case "ToyotaA" -> {
+                case "4" -> {
                     director.buildToyotaA(toyotaBuilder);
-                    car = toyotaBuilder.returnCar();
+                    car = toyotaBuilder.build();
                     System.out.println("price: " + car.getPrice());
                 }
-                case "ToyotaB" -> {
+                case "5" -> {
                     director.buildToyotaB(toyotaBuilder);
-                    car = toyotaBuilder.returnCar();
+                    car = toyotaBuilder.build();
                     System.out.println("price: " + car.getPrice());
                 }
                 default -> System.out.println("Please enter valid car type");
             }
         }
 
-        System.out.println("Decorate your vehicle using:");
-        System.out.println("- Spoiler    || 80");
-        System.out.println("- Cupholder  || 300");
-        System.out.println("- Machinegun || 1000");
-        System.out.println("Type \"Done\" to finish your car");
+        System.out.println("""
+            Decorate your vehicle using:
+            [0] - Spoiler    || 80
+            [1] - Cupholder  || 300
+            [2] - Machinegun || 1000
+            Type "Done" to finish your car
+            """);
         input = s.next();
-        while (!input.equals("Done")) {
+        while (!input.equalsIgnoreCase("Done")) {
             switch (input) {
-                case "Spoiler" -> {
+                case "0" -> {
                     car = new Spoiler(car);
                     System.out.println("price: " + car.getPrice());
                 }
-                case "Cupholder" -> {
+                case "1" -> {
                     car = new Cupholder(car);
                     System.out.println("price: " + car.getPrice());
                 }
-                case "Machinegun" -> {
+                case "2" -> {
                     car = new MachineGun(car);
                     System.out.println("price: " + car.getPrice());
                 }
@@ -102,10 +123,10 @@ public class CarDealerShip {
         System.out.println(" Y - yes || N - no");
         while (true){
             input = s.next();
-            if (input.equals("Y")) {
+            if (input.equalsIgnoreCase("Y")) {
                 System.out.println("here is your car");
                 return car;
-            } else if (input.equals("N")) {
+            } else if (input.equalsIgnoreCase("N")) {
                 return this.getCar();
             } else {
                 System.out.println("Could not recognise input, Please enter Y or N");

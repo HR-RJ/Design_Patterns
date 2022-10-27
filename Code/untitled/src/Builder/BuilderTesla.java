@@ -1,39 +1,24 @@
-package Builder;
+package builder;
 
-import Car.LadaCar;
-import Car.TeslaCar;
-import Engine.AbstractEngine;
-import Engine.DieselEngine;
-import Engine.ElectricalEngine;
-import Engine.NuclearEngine;
+import car.TeslaCar;
+import engine.EngineType;
 
-public class BuilderTesla implements Builder {
+/**
+ * builds a TeslaCar
+ * Uses the an enum (found in engine.EngineType) to check that someone doesn't try to add
+ * a diesel engine to a Tesla
+ */
+public class BuilderTesla extends AbstractBuilder {
 
-    private int seats;
-    private Boolean manual;
-    private AbstractEngine engine;
-
-
-    public void setSeats(int _seats) {
-        this.seats= _seats;
-    }
-
-    public void setManual(Boolean _manual) {
-        this.manual = _manual;
-    }
-
-    public void setEngine(String _engine) {
-        switch(_engine) {
-            case "Electric":
-                this.engine = new ElectricalEngine();
-                break;
-            case "Nuclear":
-                this.engine = new NuclearEngine();
-                break;
+    @Override
+    public void setEngine(EngineType engine) {
+        if (engine == EngineType.DIESEL) {
+            throw new IllegalArgumentException("Tesla is not allowed to have a diesel-engine.");
         }
+        super.setEngine(engine);
     }
 
-    public TeslaCar returnCar(){
+    public TeslaCar build(){
         return new TeslaCar(this.engine, this.seats, this.manual);
     }
 }

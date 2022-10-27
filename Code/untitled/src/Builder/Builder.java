@@ -1,7 +1,11 @@
-package Builder;
+package builder;
+
+import car.AbstractCar;
+import engine.EngineType;
 
 public interface Builder {
-    void setSeats(int _seats);
-    void setManual(Boolean _manual);
-    void setEngine(String _engine);
+    void setSeats(int seats);
+    void setManual(boolean manual);
+    void setEngine(EngineType engine);
+    AbstractCar build();
 }

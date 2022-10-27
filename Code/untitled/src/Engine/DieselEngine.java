@@ -1,12 +1,13 @@
-package Engine;
+package engine;
 
-public class DieselEngine extends AbstractEngine{
-    private int price = 50;
+public class DieselEngine extends AbstractEngine {
+
+    public DieselEngine() {
+        super(50);
+    }
+
     @Override
     public String toString() {
-        return "*oil leaks*";
-    }
-    public void print(){
-        System.out.println("Diesel startup noise.......");
+        return "Diesel engine";
     }
 }

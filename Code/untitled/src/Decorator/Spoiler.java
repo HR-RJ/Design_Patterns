@@ -1,16 +1,15 @@
-package Decorator;
+package decorator;
 
-import Car.AbstractCar;
+import car.Car;
 
 public class Spoiler extends AbstractDecorator {
-    int price = 80;
 
-    public Spoiler(AbstractCar _base) {
-        super(_base);
+    public Spoiler(Car base) {
+        super(base, 80);
     }
 
     public int getPrice(){
-        return super.getPrice() + price;
+        return super.getPrice();
     }
     public void print(){
         super.print();

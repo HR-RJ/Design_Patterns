@@ -1,13 +1,13 @@
-package Engine;
+package engine;
 
 public class ElectricalEngine extends AbstractEngine{
-    private int price = 100;
 
-    public String toString() {
-        return "*electricity sparks*";
+    public ElectricalEngine() {
+        super(100);
     }
 
-    public void print(){
-        System.out.println("Electric noise ... zoom...");
+    @Override
+    public String toString() {
+        return "Electric engine";
     }
 }

@@ -1,16 +1,15 @@
-package Decorator;
+package decorator;
 
-import Car.AbstractCar;
+import car.Car;
 
 public class MachineGun extends AbstractDecorator{
-    int price = 1000;
 
-    public MachineGun(AbstractCar _base) {
-        super(_base);
+    public MachineGun(Car base) {
+        super(base, 1000);
     }
 
     public int getPrice(){
-        return super.getPrice() + price;
+        return super.getPrice();
     }
     public void print(){
         super.print();

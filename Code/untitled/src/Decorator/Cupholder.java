@@ -1,16 +1,15 @@
-package Decorator;
+package decorator;
 
-import Car.AbstractCar;
+import car.Car;
 
 public class Cupholder extends AbstractDecorator {
-    int price = 300;
 
-    public Cupholder(AbstractCar _base) {
-        super(_base);
+    public Cupholder(Car base) {
+        super(base, 300);
     }
 
     public int getPrice(){
-        return super.getPrice() + price;
+        return super.getPrice();
     }
     public void print(){
         super.print();

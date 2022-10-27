@@ -1,30 +1,16 @@
-package Car;
-// package Engine;
+package car;
 
-import Engine.AbstractEngine;
+import engine.AbstractEngine;
 
 public class LadaCar extends AbstractCar {
-    private int price = 10;
 
-    public LadaCar(AbstractEngine _engine, int _seats, boolean _manual){
-        this.engine = _engine;
-        this.seats = _seats;
-        this.manual = _manual;
-    }
-
-    public int getPrice() {
-        if(engine == null){
-            System.out.println("Oh no, no engine found ☺, good luck driving tho");
-            return super.price+price;
-        }
-        else {
-            return super.price+price+engine.getPrice();
-        }
+    public LadaCar(AbstractEngine engine, int seats, boolean manual){
+        super(engine, seats, manual, 90);
     }
 
     @Override
     public void print() {
-        System.out.println("Lada");
+        System.out.println("Type Car: Lada");
         super.print();
     }
 }
