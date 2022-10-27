@@ -2,9 +2,6 @@ package decorator;
 
 import car.Car;
 
-/**
- * Basis for the decorators
- */
 public abstract class AbstractDecorator implements Car {
 
     private Car base;
